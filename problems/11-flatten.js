@@ -17,7 +17,6 @@ function flatten(arr) {
   let returnArr=[];
   for (let el of arr){
     if (Array.isArray(el)){
-      // let currArr= flatten(el);
       returnArr=returnArr.concat(flatten(el));
     }
     else returnArr.push(el);

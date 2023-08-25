@@ -12,19 +12,25 @@ examples below if you're unsure where to start!
 
 Examples:
 
-fibonacci(1); // 1
-fibonacci(2); // 1
-fibonacci(3); // 2
-fibonacci(4); // 3
-fibonacci(10); // 55
 ***********************************************************************/
-//
-//
-//
+//base case- if n<=2 return 1;
+
+//recursive case- else statement
+
+//recursive step- ((n-2) + (n-1))
 
 function fibonacci(n) {
-
-}
+  if (n <= 2) {
+    return 1;
+  }
+  else
+    return fibonacci(n-1) + fibonacci(n-2);
+  }
+// console.log(fibonacci(1)); // 1
+// console.log(fibonacci(2)); // 1
+console.log(fibonacci(3)); // 2
+console.log(fibonacci(4)); // 3
+console.log(fibonacci(10)); // 55
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = fibonacci;

@@ -4,18 +4,30 @@ is sorted in ascending order.
 
 Examples:
 
-isSorted([1, 2, 3, 4, 5]); // true
-isSorted([1, 2, 4, 3, 5]); // false
-isSorted([2, 4, 6, 7, 8]); // true
-isSorted([5, 4, 3, 2, 1]); // false
 ***********************************************************************/
+//base case - when arr.length=0 --> true
 
+//recursive case - when arr.length
+
+// recursive step- slice off first element --> is currelement less than next element
 
 function isSorted(arr) {
-  // Your code here 
+  if (arr.length === 0){
+    return true;
+  }
+  if (arr.length > 0){
+    if (arr[0] > arr[1]){
+      return false;
+    }
+   return isSorted(arr.slice(1));
+  }
 }
 
 
+console.log(isSorted([1, 2, 3, 4, 5])); // true
+console.log(isSorted([1, 2, 4, 3, 5])); // false
+isSorted([2, 4, 6, 7, 8]); // true
+isSorted([5, 4, 3, 2, 1]); // false
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = isSorted;
