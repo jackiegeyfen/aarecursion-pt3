@@ -1,6 +1,6 @@
 /***********************************************************************
 Write a recursive function called `factorial` that takes an integer, `num`,
-and returns the factorial of `num`. Assume the value of `num` is greater 
+and returns the factorial of `num`. Assume the value of `num` is greater
 than or equal to 1.
 
 A factorial is the number get when multiplying a number by itself minus one
@@ -11,15 +11,25 @@ point, also sometimes called a "bang" in programming.
 
 Examples:
 
-factorial(1); // 1
-factorial(3); // 6
-factorial(5); // 120
 ***********************************************************************/
+// base case- num gets down to 1
+
+// recursvie case-any time num > 1
+
+// recursive step- num-1 every time
 
 function factorial(num) {
-  // Your code here 
+  debugger
+  if (num === 1){
+    return num;
+  }
+  if (num > 1) {
+    return num * factorial(num-1);
+  }
 }
-  
+
+// factorial(1); // 1
+factorial(3); // 6
+factorial(5); // 120
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = factorial;
-  
